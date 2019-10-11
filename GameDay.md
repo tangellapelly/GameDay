@@ -1,5 +1,5 @@
 ## Building a gas station chatbot with AWS Lex, Lambda and Here services:
-
+![alt text](screenshots/chatbot.png "testing the chatbot")
 In this tutorial, we will deploy a small chatbot with AWS Lex and Here servies to help users find the gas stations near by a specified location. We will explore the combination of AWS services, Here API services and how they can be stitched together to create a powerful, scalable and secure application. To complete this tutorial, you will need: An AWS Account, basic knowledge of the AWS UI, account with developer.here.com ,and some basic understanding of node/Javascript.
 
 # Step 1: Deploy Lex bot
@@ -181,3 +181,37 @@ The first time you hit Test, you will be asked to supply a JSON snippet describi
 }
 ```
 
+Here is the <a target="_blank" href="https://heremaps.s3.amazonaws.com/getPetrolStations-9cf1d5f0-1ce7-4da0-9a44-e9ace1954d49.zip">link</a> to download the Lambda deployment package. Once you download the zip file, upload into the AWS Lambda function code dashboard as shown in the below screenshot.
+
+![alt text](screenshots/step13.png "creating lambda function")
+
+Now, select the *Upload a zip file* option from the dropdown to upload the downloaded zip file. 
+
+![alt text](screenshots/step14.png "creating lambda function")
+
+Now that we have created out Lambda function, it time to integrate it with Amazon Lex. Head over to the lex dashboard and select the bot that we have already created to integrate the Lambda function.
+
+
+![alt text](screenshots/step15.png "creating lambda function")
+
+Go the chatbot setting and under the Fullfillment select _AWS Lambda function_ and choose the getGasStationsNearBy function. It will ask for the permissions, go ahead and click on _OK_
+
+
+![alt text](screenshots/step16.png "creating lambda function")
+
+Finally, click on the _Save Intent_ button towards the bottom of the page to save all the settings.
+
+## Step 3: Testing the chatbot
+
+Its the fun part now! In order to test our chatbot, click on the _build_ button on the top right of the dashboard. It will take a while to build and once its done, you should be able to see chatbot section in the left side of the screen.
+
+
+![alt text](screenshots/step17.png "testing the chatbot")
+
+Go ahead and test it. 
+
+## Conclusion
+
+In this work shop we have build a chatbot powered by Lex, Lambda and HERE servies 
+
+![alt text](screenshots/chatbot.png "testing the chatbot")
