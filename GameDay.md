@@ -205,7 +205,7 @@ Finally, click on the _Save Intent_ button towards the bottom of the page to sav
 
 ## Step 3: Testing the chatbot
 
-Its the fun part now! In order to test our chatbot, click on the _build_ button on the top right of the dashboard. It will take a while to build and once its done, you should be able to see chatbot section in the left side of the screen.
+Its the fun part now! In order to test our chatbot, click on the _build_ button on the top right of the dashboard. It will take a while to build and once its done, you should be able to see chatbot section in the right side of the screen.
 
 
 ![alt text](screenshots/step17.png "testing the chatbot")
