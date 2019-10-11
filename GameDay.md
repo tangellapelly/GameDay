@@ -1,6 +1,8 @@
-## Building a gas station chatbot with AWS Lex, Lambda and Here services:
+## Building a gas stations chatbot with AWS Lex, Lambda and HERE services:
+
 ![alt text](screenshots/chatbot.png "testing the chatbot")
-In this tutorial, we will deploy a small chatbot with AWS Lex and Here servies to help users find the gas stations near by a specified location. We will explore the combination of AWS services, Here API services and how they can be stitched together to create a powerful, scalable and secure application. To complete this tutorial, you will need: An AWS Account, basic knowledge of the AWS UI, account with developer.here.com ,and some basic understanding of node/Javascript.
+
+In this tutorial, we will deploy a small chatbot with AWS Lex and HERE servies to help users find the gas stations near by a specified location. We will explore the combination of AWS services, HERE API services and how they can be stitched together to create a powerful, scalable and secure application. To complete this tutorial, you will need: An AWS Account, basic knowledge of the AWS UI, account with developer.here.com ,and some basic understanding of node/Javascript.
 
 # Step 1: Deploy Lex bot
 
@@ -47,7 +49,7 @@ We need to add in variations of that utterance you can think of,but keep it rela
 
 ![alt text](screenshots/step9.png "Adding uttetances")
 
-Notice for Fulfillment, you have the option to either send the intent to a lambda function or return parameters to client. For now, lets click Return Parameters to Client and click save. We’re going to check on our bot before moving over to Amazon Lambda and creating the business logic of our chatbot. Scroll down and save your intent.
+Notice for Fulfillment, you have the option to either send the intent to a Lambda function or return parameters to client. For now, lets click Return Parameters to Client and click save. We’re going to check on our bot before moving over to Amazon Lambda and creating the business logic of our chatbot. Scroll down and save your intent.
 
 ![alt text](screenshots/step10.png "Adding Fulfillment")
 
