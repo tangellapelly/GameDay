@@ -2,7 +2,7 @@
 
 ![alt text](screenshots/chatbot.png "testing the chatbot")
 
-In this tutorial, we will deploy a small chatbot with AWS Lex and HERE servies to help users find the gas stations near by a specified location. We will explore the combination of AWS services, HERE API services and how they can be stitched together to create a powerful, scalable and secure application. To complete this tutorial, you will need: An AWS Account, basic knowledge of the AWS UI, account with developer.here.com ,and some basic understanding of node/Javascript.
+In this workshop, we will deploy a small chatbot with AWS Lex and HERE servies to help users find the gas stations near by a specified location. We will explore the combination of AWS services, HERE API services and how they can be stitched together to create a powerful, scalable and secure application. To complete this workshop, you will need: An AWS Account, basic knowledge of the AWS UI, account with developer.here.com ,and some basic understanding of node/Javascript.
 
 # Step 1: Deploy Lex bot
 
