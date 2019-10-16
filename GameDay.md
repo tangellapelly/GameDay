@@ -4,6 +4,39 @@
 
 In this workshop, we will deploy a small chatbot with AWS Lex and HERE servies to help users find the gas stations near by a specified location. We will explore the combination of AWS services, HERE API services and how they can be stitched together to create a powerful, scalable and secure application. To complete this workshop, you will need: An AWS Account, basic knowledge of the AWS UI, account with developer.here.com ,and some basic understanding of node/Javascript.
 
+### Prerequisites:
+* HERE Services credentials.
+* Knowledge on AWS Lex and Lambda
+
+
+### Getting HERE credentials from AWS Market place
+
+To get the credential, head over to <a href="https://aws.amazon.com/marketplace">AWS Marketplace</a>. Select HERE from the vendor drop down and click on _View results_ button.
+
+![alt ](/assets/sh-1.png "AWS Market place")
+
+In the next page we will find the HERE Location Services, go ahead and click on it. Now we will be greeted with HERE Location Services over view page. On the top left hand side of the page you will find the _Continue to Subscribe_ button click on it to subscribe for HERE Services. 
+
+_PS:You don't need credit card for the subscription_
+
+![alt ](/assets/sh-2.png "AWS HERE over view page")
+
+Once subscribed we will see a succuss message like so:
+
+![alt ](/assets/sh-2-1.png "AWS HERE over view page")
+
+Now that we have successfully subscribed, click on the _Setup your account_ button. After this we be asked to sign up for a HERE Developer Account.
+
+![alt ](/assets/sh-4.png "AWS HERE Sign-up page")
+
+Now, fill up the form and sign up to get the HERE credentials.
+
+Once logged in we will notice the generate button, go ahead and click on it to generate codes.
+
+Finally, we will get the code as shown below
+
+![alt ](/assets/sh-5.png "AWS HERE Sign-up page")
+
 # Step 1: Deploy Lex bot
 
 Login to your AWS console, find Amazon Lex and click on it. Now, click on the create button to get started and then on the next screen, click Custom Bot, fill in the details as shown in the screenshot below.
@@ -69,6 +102,8 @@ In your AWS console, go to Amazon Lambda and select Build a Function from Scratc
 
 On this next Screen you will be treated to your lambda function, the designer tool, and some dashboard items for testing and monitoring your function. The following is the lambda function that we wanted to create:
 
+_PS: Don't forget to add the HERE credentials_
+
 ```javascript
 'use strict';
 const axios = require('axios')     
@@ -96,7 +131,7 @@ async function dispatch(intentRequest, callback) {
           const gpsCodes = slots.gpsCodes;
     const codes = gpsCodes.split(',');
        // API to get the list of gas stations
-              let gasStation = axios.get(`https://places.demo.api.here.com/places/v1/discover/search?at=${codes[0].trim()},${codes[1].trim()}&q=petrol-station&app_id=MMRyT9PioGx6DeImyPie&app_code=SB7YD1dqPH40vz-lSJE19g`, {}).then((data)=>{
+              let gasStation = axios.get(`https://places.demo.api.here.com/places/v1/discover/search?at=${codes[0].trim()},${codes[1].trim()}&q=petrol-station&app_id={APP_ID}&app_code={APP_CODE}`, {}).then((data)=>{
                  
                 let gasStationNames= data.data.results.items.map((it)=>{
                     
