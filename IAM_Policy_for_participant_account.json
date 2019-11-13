@@ -1,0 +1,229 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            
+            "Effect": "Allow",
+            "Action": "iam:DetachRolePolicy",
+            "Resource": "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots",
+            "Condition": {
+                "StringLike": {
+                    "iam:PolicyArn": "arn:aws:iam::aws:policy/aws-service-role/AmazonLexBotPolicy"
+                }
+            }
+        },
+        {
+           
+            "Effect": "Allow",
+            "Action": "iam:CreateServiceLinkedRole",
+            "Resource": "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels",
+            "Condition": {
+                "StringLike": {
+                    "iam:AWSServiceName": "channels.lex.amazonaws.com"
+                }
+            }
+        },
+        {
+           
+            "Effect": "Allow",
+            "Action": "iam:DetachRolePolicy",
+            "Resource": "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels",
+            "Condition": {
+                "StringLike": {
+                    "iam:PolicyArn": "arn:aws:iam::aws:policy/aws-service-role/LexChannelPolicy"
+                }
+            }
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "polly:SynthesizeSpeech",
+                "iam:CreateServiceSpecificCredential",
+                "iam:GetAccountPasswordPolicy",
+                "iam:DeactivateMFADevice",
+                "iam:DeleteAccessKey",
+                "iam:GenerateServiceLastAccessedDetails",
+                "iam:UpdateOpenIDConnectProviderThumbprint",
+                "iam:PutRolePolicy",
+                "iam:AddRoleToInstanceProfile",
+                "iam:SetSecurityTokenServicePreferences",
+                "iam:SimulateCustomPolicy",
+                "iam:DeleteServerCertificate",
+                "iam:UploadSSHPublicKey",
+                "iam:DetachGroupPolicy",
+                "iam:DeleteOpenIDConnectProvider",
+                "iam:GetCredentialReport",
+                "iam:PutGroupPolicy",
+                "iam:UpdateServiceSpecificCredential",
+                "iam:GetRole",
+                "iam:GetPolicy",
+                "iam:RemoveClientIDFromOpenIDConnectProvider",
+                "iam:DeleteRole",
+                "iam:UpdateRoleDescription",
+                "cloudwatch:GetMetricStatistics",
+                "iam:UpdateServerCertificate",
+                "cloudwatch:DescribeAlarms",
+                "iam:GetOpenIDConnectProvider",
+                "iam:GetRolePolicy",
+                "iam:CreateInstanceProfile",
+                "iam:GenerateCredentialReport",
+                "iam:PutRolePermissionsBoundary",
+                "iam:ResetServiceSpecificCredential",
+                "iam:DeleteRolePermissionsBoundary",
+                "iam:GetServiceLastAccessedDetails",
+                "iam:GetServiceLinkedRoleDeletionStatus",
+                "iam:PassRole",
+                "iam:DeleteRolePolicy",
+                "iam:EnableMFADevice",
+                "iam:ResyncMFADevice",
+                "iam:ListAttachedGroupPolicies",
+                "iam:DeleteAccountAlias",
+                "iam:UpdateSAMLProvider",
+                "iam:DeleteInstanceProfile",
+                "iam:GetSSHPublicKey",
+                "iam:PutUserPermissionsBoundary",
+                "iam:ListRoles",
+                "iam:DeleteUser",
+                "iam:DeleteUserPermissionsBoundary",
+                "polly:DescribeVoices",
+                "iam:GetContextKeysForCustomPolicy",
+                "iam:CreatePolicy",
+                "iam:CreateServiceLinkedRole",
+                "iam:AttachGroupPolicy",
+                "iam:DeleteVirtualMFADevice",
+                "kms:ListAliases",
+                "iam:PutUserPolicy",
+                "iam:UpdateRole",
+                "iam:GetUser",
+                "iam:AddClientIDToOpenIDConnectProvider",
+                "iam:DeleteServiceSpecificCredential",
+                "iam:SetDefaultPolicyVersion",
+                "iam:DeleteSAMLProvider",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:GetPolicyVersion",
+                "iam:DeleteGroup",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:UpdateGroup",
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "iam:CreateLoginProfile",
+                "iam:DetachRolePolicy",
+                "iam:SimulatePrincipalPolicy",
+                "cloudwatch:DescribeAlarmsForMetric",
+                "iam:ListAttachedRolePolicies",
+                "iam:CreateAccountAlias",
+                "iam:DetachUserPolicy",
+                "iam:GetAccountAuthorizationDetails",
+                "iam:ChangePassword",
+                "iam:UpdateLoginProfile",
+                "iam:GetServerCertificate",
+                "iam:CreateGroup",
+                "iam:UpdateUser",
+                "iam:GetAccessKeyLastUsed",
+                "iam:DeleteUserPolicy",
+                "iam:AttachUserPolicy",
+                "iam:UpdateAccessKey",
+                "cloudformation:*",
+                "iam:UpdateSSHPublicKey",
+                "lex:*",
+                "iam:DeleteSigningCertificate",
+                "iam:UpdateAccountPasswordPolicy",
+                "iam:GetUserPolicy",
+                "iam:DeleteServiceLinkedRole",
+                "iam:GetGroupPolicy",
+                "iam:GetServiceLastAccessedDetailsWithEntities",
+                "iam:DeleteSSHPublicKey",
+                "iam:DeletePolicy",
+                "iam:CreateSAMLProvider",
+                "iam:CreateVirtualMFADevice",
+                "iam:CreateUser",
+                "iam:GetGroup",
+                "iam:GetOrganizationsAccessReport",
+                "iam:CreateAccessKey",
+                "iam:GetContextKeysForPrincipalPolicy",
+                "iam:AddUserToGroup",
+                "iam:RemoveUserFromGroup",
+                "iam:GenerateOrganizationsAccessReport",
+                "iam:ListAttachedUserPolicies",
+                "iam:CreatePolicyVersion",
+                "iam:GetSAMLProvider",
+                "iam:DeleteLoginProfile",
+                "iam:UploadSigningCertificate",
+                "iam:DeleteAccountPasswordPolicy",
+                "iam:GetInstanceProfile",
+                "iam:CreateOpenIDConnectProvider",
+                "iam:UploadServerCertificate",
+                "kms:ListKeys",
+                "lambda:*",
+                "iam:UpdateSigningCertificate",
+                "iam:DeleteGroupPolicy",
+                "iam:DeletePolicyVersion"
+            ],
+            "Resource": "*"
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateServiceSpecificCredential",
+                "iam:UpdateServiceSpecificCredential",
+                "kms:ListKeyPolicies",
+                "kms:ListRetirableGrants",
+                "iam:ResetServiceSpecificCredential",
+                "iam:ListServiceSpecificCredentials",
+                "iam:DeleteServiceSpecificCredential",
+                "kms:ListGrants"
+            ],
+            "Resource": [
+                "arn:aws:kms:*:*:key/*",
+                "arn:aws:iam::*:user/${aws:username}"
+            ]
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "iam:DeleteRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots",
+                "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels"
+            ]
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetServiceLinkedRoleDeletionStatus",
+                "iam:DeleteServiceLinkedRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/aws-service-role/lex.amazonaws.com/AWSServiceRoleForLexBots"
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetServiceLinkedRoleDeletionStatus",
+                "iam:DeleteServiceLinkedRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/aws-service-role/channels.lex.amazonaws.com/AWSServiceRoleForLexChannels"
+        },
+        {
+            
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListRoleTags",
+                "iam:ListRolePolicies"
+            ],
+            "Resource": "arn:aws:iam::*:role/*"
+        },
+        {
+            
+            "Effect": "Deny",
+            "Action": "ec2:*",
+            "Resource": "*"
+        }
+    ]
+}
